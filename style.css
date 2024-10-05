@@ -148,7 +148,7 @@ p {
 /* Responsive Media Grid */
 @media (max-width: 1200px) {
     .media-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
@@ -167,7 +167,7 @@ p {
 /* Media Grid 1 */
 .media-grid-1 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     padding: 10px;
 }
 

@@ -179,20 +179,20 @@ p {
 
 /* Responsive Media Grid 1 */
 @media (max-width: 1200px) {
-    .media-grid-1 {
+    .media-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
-    .media-grid-1 {
+    .media-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
-    .media-grid-1 {
-        grid-template-columns: 1fr;
+    .media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
     }
 }
 

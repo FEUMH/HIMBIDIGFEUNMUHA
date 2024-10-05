@@ -239,51 +239,105 @@ video {
     }
 }
 
-/* Event Grid */
-.event-grid {
+.profile-grid { 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted min width to match profile-grid */
-    gap: 15px; /* Space between event items */
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller min width */
+    gap: 15px; /* Space between profile items */
 }
 
-/* Event Item */
-.event-item {
+/* Profile Item */
+.profile-item {
     background-color: white; /* Clean white background */
     border: 1px solid #e0e0e0; /* Light border for subtle separation */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Padding inside event items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside profile items */
     text-align: center; /* Centered text */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
 }
 
-/* Event Item Hover Effect */
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller min width */
+    gap: 10px; /* Reduced space between profile items */
+}
+
+/* Profile Item */
+.profile-item {
+    background-color: white; /* Clean white background */
+    border: 1px solid #e0e0e0; /* Light border for subtle separation */
+    border-radius: 8px; /* Smaller rounded corners */
+    padding: 10px; /* Reduced padding */
+    text-align: center; /* Centered text */
+    transition: transform 0.2s, box-shadow 0.2s; /* Faster hover effects */
+}
+
+/* Profile Item Hover Effect */
 .event-item:hover {
     box-shadow: 0 4px 10px rgba(0, 104, 255, 0.2); /* Subtle shadow on hover */
     transform: translateY(-2px); /* Lift effect on hover */
 }
 
-/* Event Image */
-.event-item img {
-    width: 100%; /* Adjusted width for better fit */
+/* event Image */
+.event-image {
+    width: 80%; /* Adjusted width for better fit */
     height: auto;
-    border-radius: 4px; /* More pronounced rounded corners */
+    border-radius: 50%; /* More pronounced rounded corners */
     margin-bottom: 8px; /* Space below the image */
 }
 
-/* Event Text */
-.event-text {
-    padding: 10px; /* Adjusted padding */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* event Name */
+.event-name {
+    margin: 5px 0 3px 0; /* Reduced space around the name */
+    font-size: 1.1rem; /* Smaller font size */
+    font-weight: bold; /* Bold name for emphasis */
+    color: #333; /* Darker color for better readability */
 }
 
-/* Event Title */
-.event-text h3 {
-    margin-bottom: 10px; /* Space below the title */
-    font-size: 1rem; /* Adjusted font size */
+/* event Description */
+.event-description {
+    color: #777; /* Lighter color for less emphasis */
+    font-weight: normal; /* Normal weight for description */
+    margin-top: 3px; /* Reduced space above the description */
+    font-size: 0.8rem; /* Smaller font size for description */
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .event-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller min width on medium devices */
+        gap: 8px; /* Less gap on medium devices */
+    }
+
+    .event-name {
+        font-size: 1rem; /* Slightly smaller font size on medium devices */
+    }
+
+    .event-description {
+        font-size: 0.75rem; /* Smaller font size for description */
+    }
+}
+
+@media (max-width: 480px) {
+    .event-grid {
+        grid-template-columns: 1fr; /* Single column layout on small devices */
+    }
+
+    .event-item {
+        padding: 8px; /* Reduced padding for smaller screens */
+    }
+
+    .event-name {
+        font-size: 0.9rem; /* Even smaller font size on small devices */
+    }
+
+    .event-description {
+        font-size: 0.7rem; /* Smaller font size for description */
+    }
+}
+
+
+/*wwwwwwwwwwwwwwwwwwwwwww*/
 
 /* Profile Container */
 .profile-container , .event-container , .media-container , .latar-container{

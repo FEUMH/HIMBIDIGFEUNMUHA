@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">  
 <head>
-    <title>HIMPUNAN BISNIS DIGITAL FE UNMUHA</title> 
+    <title>HIMPUNAN BISNIS DIGITAL FE UNMUHA</title>
     <link rel="icon" type="image/x-icon" href="../assets/icon/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,37 +34,50 @@
         <h1>Acara</h1>
         <div class="event-container">
         <div class="event-grid">
-            <div class="event-item">
-                <img src="../assets/event/event1.png" alt="Event Image 1" onclick="openImage('assets/event/event1.png')">
-                <div class="event-text">
-                    <h3>Event Website Himbidig</h3>
-                    <p>Website <strong><em>Himpunan Bisnis Digital</em></strong>dibuat pada tanggal 1 okt 2024</p>
-                </div>
-            </div>
+                <div class="event-item">
+                    <img src="../assets/event/event1.png" alt="Image 1" onclick="openImage('../assets/event/event1.png')">
+                    <div class="description">
+                        <p class="text-minimized">
+                            <strong>Pembuatan Web</strong><br>
+                        <span class="more-text">
+                            Website <em>Himbidig Fe Unmuha</em>
+                        dibuat pada tanggal 1 ocktober 2024, yang dimaksudkan untuk menampilkan event atau acara ke dalam website ini,
+                        website ini dibuat oleh <em>Achmed Basith</em> juga selaku sebagai angota dari organisasi Himbidig Fe Unmuha,
+                        dalam pembuatannya memakan waktu 7 (tujuh) hari termasuk ide perancangan, pembuatan, revisi.
+                        </span></p>
 
-            <div class="event-item">
-                <img src="../assets/event/??" alt="Event Image 2" onclick="openImage('')">
-                <div class="event-text">
-                    <h3>Event Title 2</h3>
-                    <p>Description of the event goes here. It can include key details and features.</p>
+                        <button class="toggle-btn">Baca Lebih Lanjut</button>
+                    </div>
                 </div>
-            </div>
+                <div class="event-item">
+                    <img src="image2.jpg" alt="Image 2">
+                    <div class="description">
+                        <p class="text-minimized">
+                            <strong>Judul</strong><br>
+                        <span class="more-text">
+                           masukkan deskripsi disini Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </span></p>
 
-            <div class="event-item">
-                <img src="../assets/event/??" alt="Event Image 3" onclick="openImage('')">
-                <div class="event-text">
-                    <h3>Event Title 3</h3>
-                    <p>Description of the event goes here. It can include key details and features.</p>
+                        <button class="toggle-btn">Baca Lebih Lanjut</button>
+                    </div>
                 </div>
-            </div>
+                <div class="event-item">
+                    <img src="image3.jpg" alt="Image 3">
+                    <div class="description">
+                        <p class="text-minimized">
+                            <strong>Judul</strong><br>
+                        <span class="more-text">
+                           masukkan deskripsi disini 
+                        </span></p>
 
-            <div class="event-item">
-                <img src="../assets/event/??" alt="Event Image 4" onclick="openImage('')">
-                <div class="event-text">
-                    <h3>Event Title 4</h3>
-                    <p>Description of the event goes here. It can include key details and features.</p>
+                        <button class="toggle-btn">Baca Lebih Lanjut</button>
+                    </div>
                 </div>
-            </div>
         </div>
         </div>
     </div>
@@ -98,5 +111,26 @@
         function openImage(imageUrl) {
             window.open(imageUrl, '_blank');
         }
+    </script>
+
+    <script>
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const moreText = button.previousElementSibling.querySelector('.more-text');
+                const isExpanded = moreText.style.display === "inline";
+
+                if (isExpanded) {
+                    moreText.style.display = "none";
+                    button.textContent = "Baca Lebih Lanjut";
+                } else {
+                    moreText.style.display = "inline";
+                    button.textContent = "Baca Lebih Sedikit";
+                }
+            });
+
+            // Automatically minimize text on page load
+            const moreText = button.previousElementSibling.querySelector('.more-text');
+            moreText.style.display = "none"; // Ensure more text is hidden initially
+        });
     </script>
 </body>

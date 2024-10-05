@@ -239,105 +239,91 @@ video {
     }
 }
 
-.profile-grid { 
+/* Event Grid */
+.event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller min width */
-    gap: 15px; /* Space between profile items */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller min width for smaller screens */
+    gap: 10px; /* Reduced space between items */
+    padding: 10px; /* Reduced padding around the grid */
 }
 
-/* Profile Item */
-.profile-item {
+/* Event Item */
+.event-item {
     background-color: white; /* Clean white background */
     border: 1px solid #e0e0e0; /* Light border for subtle separation */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Padding inside profile items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px; /* Minimal padding for a compact look */
     text-align: center; /* Centered text */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: hidden; /* Prevent overflow */
 }
 
-/* Profile Grid */
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller min width */
-    gap: 10px; /* Reduced space between profile items */
-}
-
-/* Profile Item */
-.profile-item {
-    background-color: white; /* Clean white background */
-    border: 1px solid #e0e0e0; /* Light border for subtle separation */
-    border-radius: 8px; /* Smaller rounded corners */
-    padding: 10px; /* Reduced padding */
-    text-align: center; /* Centered text */
-    transition: transform 0.2s, box-shadow 0.2s; /* Faster hover effects */
-}
-
-/* Profile Item Hover Effect */
+/* Event Item Hover Effect */
 .event-item:hover {
     box-shadow: 0 4px 10px rgba(0, 104, 255, 0.2); /* Subtle shadow on hover */
     transform: translateY(-2px); /* Lift effect on hover */
 }
 
-/* event Image */
-.event-image {
-    width: 80%; /* Adjusted width for better fit */
-    height: auto;
-    border-radius: 50%; /* More pronounced rounded corners */
-    margin-bottom: 8px; /* Space below the image */
+/* Event Image */
+.event-item img {
+    width: 100%; /* Full width for better fit */
+    height: 120px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 4px; /* Rounded corners for images */
+    margin-bottom: 5px; /* Space below the image */
 }
 
-/* event Name */
-.event-name {
-    margin: 5px 0 3px 0; /* Reduced space around the name */
-    font-size: 1.1rem; /* Smaller font size */
-    font-weight: bold; /* Bold name for emphasis */
-    color: #333; /* Darker color for better readability */
+/* Event Text */
+.event-text {
+    padding: 3px; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text to the start */
 }
 
-/* event Description */
-.event-description {
-    color: #777; /* Lighter color for less emphasis */
-    font-weight: normal; /* Normal weight for description */
-    margin-top: 3px; /* Reduced space above the description */
-    font-size: 0.8rem; /* Smaller font size for description */
+/* Event Title */
+.event-text h3 {
+    margin: 0; /* Remove margin for compactness */
+    font-size: 0.9rem; /* Smaller font size for title */
+    line-height: 1.2; /* Adjust line height for readability */
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Adjustments for Smaller Devices */
 @media (max-width: 768px) {
     .event-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller min width on medium devices */
-        gap: 8px; /* Less gap on medium devices */
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted for medium devices */
+        padding: 5px; /* Further reduced padding */
     }
 
-    .event-name {
-        font-size: 1rem; /* Slightly smaller font size on medium devices */
+    .event-item {
+        height: auto; /* Allow height to adjust based on content */
     }
 
-    .event-description {
-        font-size: 0.75rem; /* Smaller font size for description */
+    .event-text h3 {
+        font-size: 0.8rem; /* Smaller font size for title */
     }
 }
 
 @media (max-width: 480px) {
     .event-grid {
-        grid-template-columns: 1fr; /* Single column layout on small devices */
+        grid-template-columns: 1fr; /* Single column layout for very small devices */
+        padding: 5px; /* Minimal padding */
     }
 
     .event-item {
-        padding: 8px; /* Reduced padding for smaller screens */
+        padding: 2px; /* Minimal padding */
     }
 
-    .event-name {
-        font-size: 0.9rem; /* Even smaller font size on small devices */
+    .event-text {
+        padding: 2px; /* Even less padding for small devices */
     }
 
-    .event-description {
-        font-size: 0.7rem; /* Smaller font size for description */
+    .event-text h3 {
+        font-size: 0.7rem; /* Smaller font size for title */
     }
 }
 
-
-/*wwwwwwwwwwwwwwwwwwwwwww*/
 
 /* Profile Container */
 .profile-container , .event-container , .media-container , .latar-container{
@@ -367,7 +353,7 @@ video {
 /* Profile Grid */
 .profile-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller min width */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Smaller min width */
     gap: 10px; /* Reduced space between profile items */
 }
 

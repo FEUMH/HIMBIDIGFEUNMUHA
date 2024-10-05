@@ -242,10 +242,62 @@ video {
     }
 }
 
+{
+    text-align: center;
+}
+
+
+
+.grid-container {
+            display: flex;
+            flex-direction: column; /* One item per row */
+            gap: 20px;
+        }
+
+        .event-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        .event-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .description {
+            padding: 15px;
+            text-align: left; /* Align text to the left */
+        }
+
+        .text-minimized {
+            display: inline; /* Default state */
+        }
+
+        .more-text {
+            display: none; /* Hidden by default */
+        }
+
+        .toggle-btn {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .toggle-btn:hover {
+            background: #0056b3;
+        }
+
+
 /* Event Grid */
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller min width for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Smaller min width for smaller screens */
     gap: 10px; /* Reduced space between items */
     padding: 10px; /* Reduced padding around the grid */
 }
@@ -295,7 +347,7 @@ video {
 /* Responsive Adjustments for Smaller Devices */
 @media (max-width: 768px) {
     .event-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted for medium devices */
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjusted for medium devices */
         padding: 5px; /* Further reduced padding */
     }
 

@@ -160,7 +160,7 @@ p {
 
 @media (max-width: 480px) {
     .media-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
     }
 }
 
@@ -402,7 +402,7 @@ video {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .profile-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller min width on medium devices */
+        grid-template-columns: repeat(auto-fill, minmax(10px, 1fr)); /* Smaller min width on medium devices */
         gap: 8px; /* Less gap on medium devices */
     }
 
@@ -536,6 +536,12 @@ button:hover {
 
     h2 {
         font-size: 1.2rem;
+    }
+
+    .sub {
+        font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
     }
 
     .menu ul li a {

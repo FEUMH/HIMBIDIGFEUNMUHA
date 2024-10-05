@@ -1,0 +1,506 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    background-color: black;
+}
+
+.menu ul {
+    margin-right: 10px;
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 5px;
+}
+
+.menu ul li a {
+    border-radius: 5px;
+    font-family: courier;
+    font-weight: bold;
+    font-size: 20px;        
+    letter-spacing: 2px;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.menu ul li a:hover {
+    background-color: #0068ff;
+    color: white;
+    transition: background-color 1.5s, color 1.5s;
+
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin: 10px;
+    max-width: 70px;
+    height: auto;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.logo2 {
+    text-transform: uppercase;
+    font-family: courier;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0px;
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Subtext */
+.sub {
+    font-size: 12px;
+    color: #0068ff;               
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+/* Headings */
+h1 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    width: 350px;
+    margin: 0 auto;
+}
+
+h2 {
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+/* Paragraphs */
+p { 
+    line-height: 1.4;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Focus Styles */
+.focus {
+    border-radius: 5px;
+    border: 1px solid #0068ff;
+    color: black;
+}
+
+/* Halaman */
+.halaman {
+    padding: 5% 10%; 
+    font-family: courier;
+}
+
+/* Media Grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px; 
+    padding: 10px;
+}
+
+.media-grid img {
+    width: 100%; 
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.5s;
+}
+
+.media-grid img:hover {
+    box-shadow: 0 4px 15px rgba(0, 104, 255, 0.3); /* Subtle shadow on hover */
+    transform: translateY(-3px);
+}
+
+/* Responsive Media Grid */
+@media (max-width: 1200px) {
+    .media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media Grid 1 */
+.media-grid-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 10px;
+}
+
+.media-grid-1 img {
+    width: 100%; 
+    height: auto;
+    transition: transform 0.5s;
+}
+
+/* Responsive Media Grid 1 */
+@media (max-width: 1200px) {
+    .media-grid-1 {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .media-grid-1 {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .media-grid-1 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Video */
+video {
+    border: 1px;
+    border-style: groove;
+}
+
+.video-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 15px; 
+    padding: 20px;
+}
+
+.video-grid video {
+    width: 100%; 
+    height: 100%;
+    border-radius: 4px;
+    transition: transform 0.5s;
+}
+
+.video-grid video:hover {
+    box-shadow: 0 4px 15px rgba(0, 104, 255, 0.3); /* Subtle shadow on hover */
+    transform: translateY(-3px);
+}
+
+/* Responsive Video Grid */
+@media (max-width: 1200px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Event Grid */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.event-item {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 8px; 
+    overflow: hidden; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 104, 255, 0.3); /* Subtle shadow on hover */
+    transform: translateY(-3px);
+}
+
+.event-item img {
+    width: 40%;
+    height: auto; 
+    transition: transform 0.5s;
+}
+
+.event-item img:hover {
+    transform: scale(1.02);
+}
+
+.event-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-text h3 {
+    margin-bottom: 10px;
+}
+
+/* Profile Container */
+.profile-container , .event-container , .media-container , .latar-container{
+    padding: 20px;
+    background-color: #f8f8f8; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Profile Grid */
+.profile-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller min width */
+    gap: 15px; /* Space between profile items */
+}
+
+/* Profile Item */
+.profile-item {
+    background-color: white; /* Clean white background */
+    border: 1px solid #e0e0e0; /* Light border for subtle separation */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside profile items */
+    text-align: center; /* Centered text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller min width */
+    gap: 10px; /* Reduced space between profile items */
+}
+
+/* Profile Item */
+.profile-item {
+    background-color: white; /* Clean white background */
+    border: 1px solid #e0e0e0; /* Light border for subtle separation */
+    border-radius: 8px; /* Smaller rounded corners */
+    padding: 10px; /* Reduced padding */
+    text-align: center; /* Centered text */
+    transition: transform 0.2s, box-shadow 0.2s; /* Faster hover effects */
+}
+
+/* Profile Item Hover Effect */
+.profile-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 104, 255, 0.2); /* Subtle shadow on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Profile Image */
+.profile-image {
+    width: 80%; /* Adjusted width for better fit */
+    height: auto;
+    border-radius: 50%; /* More pronounced rounded corners */
+    margin-bottom: 8px; /* Space below the image */
+}
+
+/* Profile Name */
+.profile-name {
+    margin: 5px 0 3px 0; /* Reduced space around the name */
+    font-size: 1.1rem; /* Smaller font size */
+    font-weight: bold; /* Bold name for emphasis */
+    color: #333; /* Darker color for better readability */
+}
+
+/* Profile Description */
+.profile-description {
+    color: #777; /* Lighter color for less emphasis */
+    font-weight: normal; /* Normal weight for description */
+    margin-top: 3px; /* Reduced space above the description */
+    font-size: 0.8rem; /* Smaller font size for description */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller min width on medium devices */
+        gap: 8px; /* Less gap on medium devices */
+    }
+
+    .profile-name {
+        font-size: 1rem; /* Slightly smaller font size on medium devices */
+    }
+
+    .profile-description {
+        font-size: 0.75rem; /* Smaller font size for description */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Single column layout on small devices */
+    }
+
+    .profile-item {
+        padding: 8px; /* Reduced padding for smaller screens */
+    }
+
+    .profile-name {
+        font-size: 0.9rem; /* Even smaller font size on small devices */
+    }
+
+    .profile-description {
+        font-size: 0.7rem; /* Smaller font size for description */
+    }
+}
+
+
+
+.profile-container , .event-container , .media-container, .latar-container {
+    padding: 15px; /* Reduced padding */
+    background-color: #f8f8f8; /* Light background for contrast */
+    border-radius: 8px; /* Slightly smaller rounded corners */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* More subtle shadow */
+}
+
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: courier;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.footer .footer-links li {
+    margin: 0 15px;
+}
+
+.footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .footer-links a:hover {
+    color: #0068ff;
+}
+
+.footer .footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer .footer-links {
+        flex-direction: column;
+    }
+
+    .footer .footer-links li {
+        margin: 5px 0;
+    }
+
+    .menu {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        margin: 5px 0; 
+    }
+}
+
+/* Miscellaneous */
+.name {
+    color: #0068ff;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Extra Responsiveness for Headings and Buttons */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .menu ul li a {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+
+
+
+
+.icon {
+    width: 15px;
+}

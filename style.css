@@ -247,6 +247,33 @@ video {
     padding: 20px;
 }
 
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .event-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust to 300px */
+    }
+}
+
+@media (max-width: 480px) {
+    .event-grid {
+        grid-template-columns: 1fr; /* Stack items on very small screens */
+    }
+
+    .event-item {
+        flex-direction: column; /* Stack text below the image */
+    }
+
+    .event-item img {
+        width: 100%; /* Make images full width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area */
+    }
+
+    .event-text {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
 .event-item {
     display: flex;
     border: 1px solid lightgray;
@@ -261,7 +288,7 @@ video {
 }
 
 .event-item img {
-    width: 40%;
+    width: 40%; /* Default size for larger screens */
     height: auto; 
     transition: transform 0.5s;
 }

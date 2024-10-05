@@ -31,7 +31,7 @@ body {
 }
 
 .menu ul li {
-    margin-left: 5px;
+    margin-left: 3px;
 }
 
 .menu ul li a {
@@ -598,7 +598,7 @@ button:hover {
     }
 
     .menu ul li a {
-        font-size: 16px;
+        font-size: 14px;
         padding: 5px;
     }
 }

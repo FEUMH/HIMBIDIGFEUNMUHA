@@ -297,7 +297,7 @@ video {
 /* Event Grid */
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); /* Smaller min width for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Smaller min width for smaller screens */
     gap: 10px; /* Reduced space between items */
     padding: 10px; /* Reduced padding around the grid */
 }

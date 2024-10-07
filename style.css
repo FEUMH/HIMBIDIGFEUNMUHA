@@ -357,12 +357,6 @@ video {
         padding: 5px; /* Further reduced padding */
     }
 
-@media (max-width: 480px) {
-    .event-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted for medium devices */
-        padding: 5px; /* Further reduced padding */
-    }
-
     .event-item {
         height: auto; /* Allow height to adjust based on content */
     }

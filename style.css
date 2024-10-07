@@ -345,6 +345,12 @@ video {
 }
 
 /* Responsive Adjustments for Smaller Devices */
+@media (max-width: 1200px) {
+    .event-grid {
+        grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); /* Adjusted for medium devices */
+        padding: 5px; /* Further reduced padding */
+    }
+    
 @media (max-width: 768px) {
     .event-grid {
         grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Adjusted for medium devices */
